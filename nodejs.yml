@@ -9,7 +9,7 @@ spec:
   - name: njs-container
     image: valentechno/nodejs1
     ports: 
-    - containerPort: 8080
+    - containerPort: 9981
 ---
 apiVersion: v1
 kind: Service 
@@ -19,6 +19,6 @@ spec:
   type: NodePort
   ports:
   - port: 70
-    targetPort: 8080
+    targetPort: 9981
   selector:
     app: njs-app
